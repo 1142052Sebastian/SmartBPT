@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/root', function () {
-    return view('layouts/master_dashboard');
+    return view('index/index');
 });
 

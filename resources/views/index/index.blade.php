@@ -1,5 +1,1 @@
-@extends('layouts.master_dashboard')
-
-@section('name')
-    
-@endsection
+@extends('layouts.master_footer')
