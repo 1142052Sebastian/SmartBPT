@@ -11,7 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('sensor_data', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('id_sensor')->foreign('id_sensor')->references('id')->on('sensor');
+            $table->float('value');
+            $table->dateTime('measured_at');
+        });
     }
 
     /**
@@ -19,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('sensor_data');
     }
 };

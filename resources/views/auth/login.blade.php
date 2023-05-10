@@ -1,6 +1,12 @@
 @extends('layouts.app')
+@extends('layouts.master_footer')
+@extends('layouts.dashboard_main')
+@extends('layouts.master_sidebar')
+@extends('layouts.master_navbar')
+@extends('layouts.master_content')
 
 @section('content')
+@yield('name')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

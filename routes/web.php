@@ -20,6 +20,10 @@ Route::get('/', function () {
 Route::get('/root', function () {
     return view('index/index');
 });
+Route::get('/test', function () {
+    return view('master_user');
+});
+
 
 
 Auth::routes();

@@ -1,4 +1,4 @@
-@extends('layouts.master_content')
+{{-- @extends('layouts.master_content') --}}
 @section('footer')
     
 

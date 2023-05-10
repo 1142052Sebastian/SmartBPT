@@ -1,4 +1,4 @@
-@extends('layouts.dashboard_main')
+{{-- @extends('layouts.dashboard_main') --}}
 @section('sidebar')
     
     <div class="logo">

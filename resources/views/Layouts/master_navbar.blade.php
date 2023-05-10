@@ -1,4 +1,4 @@
-@extends('layouts.master_sidebar')
+{{-- @extends('layouts.master_sidebar') --}}
 
 @section('navbar')
 

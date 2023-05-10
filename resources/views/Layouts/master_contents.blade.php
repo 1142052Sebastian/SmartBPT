@@ -1,5 +1,5 @@
-@extends('layouts.master_navbar')
-@section('content')
+{{-- @extends('layouts.master_navbar') --}}
+@section('contents')
     
 <div class="content">
     <div class="row">
