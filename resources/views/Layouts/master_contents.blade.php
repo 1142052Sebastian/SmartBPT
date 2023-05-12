@@ -1,6 +1,8 @@
 {{-- @extends('layouts.master_navbar') --}}
 @section('contents')
-    
+<div class="panel-header panel-header-lg">
+  <canvas id="bigDashboardChart"></canvas>
+</div>
 <div class="content">
     <div class="row">
       <div class="col-lg-4">

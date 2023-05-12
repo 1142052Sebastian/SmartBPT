@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +9,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Now UI Dashboard by Creative Tim
+    
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -20,7 +22,9 @@
 
   <body class="">
     <div class="wrapper ">
+        <div class="sidebar" data-color="orange">
             @yield('sidebar')
+        </div>
       <div class="main-panel" id="main-panel">
 
         <!-- Navbar -->
@@ -28,6 +32,11 @@
             @yield('navbar')
         </nav>
         <!-- End Navbar -->
+
+        {{-- index blue chart --}}
+        <div class="panel-header panel-header-lg">
+          <canvas id="bigDashboardChart"></canvas>
+        </div>
 
         {{-- Main Page Content ( right ) --}}
         <div class="content">
@@ -39,6 +48,28 @@
         </footer>
       </div>
     </div>
+
+    <h1>Risultati della query:</h1>
+
+    <div id="results"></div>
+
+    <table>
+      <tr>
+        <td>'User_id'</td>
+        <td>'User_name'</td>
+        <td>'House_name'</td>
+        <td>'Room_type'</td>
+        <td>'Sensor_Id'</td>
+        <td>'Data_value'</td>
+        <td>'Data_pickTime'</td>
+      </tr>
+    </table>
+<ul>
+
+</ul>
+
+    {{-- Query section  --}}
+
 
     <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
@@ -56,95 +87,48 @@
     <script src="../assets/js/plugins/bootstrap-notify.js"></script>
 
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script>
+      //       $(document).ready(function() {
+      //     $.ajax({
+      //         url: "query.php",
+      //         dataType: "json",
+      //         success: function(data) {
+      //             var results = $("#results");
+      //             $.each(data, function(index, row) {
+      //                 // Crea un elemento HTML per ogni riga dei risultati e aggiungilo all'elemento "results"
+      //                 var item = $("<div>");
+      //                 item.text(row.field1 + " " + row.field2);
+      //                 results.append(item);
+      //             });
+      //         }
+      //     });
+      // });
+      var user = {!! json_encode(Auth::user()) !!}
+        fetch('http://localhost', {
+          method: 'POST',
+          body: JSON.stringify({
+            userId: 3
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => console.error(error));
 
+      ;
+    </script>
     <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
     <script src="../assets/js/myFile.js"></script>
-
     <script>
+      $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
 
-chartColor = "#FFFFFF";
+        mainboard.initDashboardPageCharts();
 
-// General configuration for the charts with Line gradientStroke
-gradientChartOptionsConfiguration = {
-    maintainAspectRatio: false,
-    legend: {
-        display: false
-    },
-    tooltips: {
-      bodySpacing: 4,
-      mode:"nearest",
-      intersect: 0,
-      position:"nearest",
-      xPadding:10,
-      yPadding:10,
-      caretPadding:10
-    },
-    responsive: 1,
-    scales: {
-        yAxes: [{
-          display:0,
-          gridLines:0,
-          ticks: {
-              display: false
-          },
-          gridLines: {
-              zeroLineColor: "transparent",
-              drawTicks: false,
-              display: false,
-              drawBorder: false
-          }
-        }],
-        xAxes: [{
-          display:0,
-          gridLines:0,
-          ticks: {
-              display: false
-          },
-          gridLines: {
-            zeroLineColor: "transparent",
-            drawTicks: false,
-            display: false,
-            drawBorder: false
-          }
-        }]
-    },
-    layout:{
-      padding:{left:0,right:0,top:15,bottom:15}
-    }
-};
+      });
+    </script>
 
-ctx = document.getElementById('lineChartExample').getContext("2d");
-
-gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-gradientStroke.addColorStop(0, '#80b6f4');
-gradientStroke.addColorStop(1, chartColor);
-
-gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
-gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
-
-myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [{
-            label: "Active Users",
-            borderColor: "#f96332",
-            pointBorderColor: "#FFF",
-            pointBackgroundColor: "#f96332",
-            pointBorderWidth: 2,
-            pointHoverRadius: 4,
-            pointHoverBorderWidth: 1,
-            pointRadius: 4,
-            fill: true,
-            backgroundColor: gradientFill,
-            borderWidth: 2,
-            data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
-        }]
-    },
-    options: gradientChartOptionsConfiguration
-});
-
-      </script>
+    
   </body>
 </html>
