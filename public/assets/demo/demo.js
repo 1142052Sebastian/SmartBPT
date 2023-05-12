@@ -84,7 +84,7 @@ demo = {
       type: 'line',
       responsive: true,
       data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        labels: ["CAcca", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         datasets: [{
           label: "Active Users",
           borderColor: "#f96332",
@@ -97,7 +97,7 @@ demo = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
-          data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
+          data: [1000, 700, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
         }]
       },
       options: gradientChartOptionsConfiguration
@@ -212,7 +212,7 @@ demo = {
     var ctx = document.getElementById('bigDashboardChart').getContext("2d");
 
     var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-    gradientStroke.addColorStop(0, '#80b6f4');
+    gradientStroke.addColorStop(0, '#ef7900');
     gradientStroke.addColorStop(1, chartColor);
 
     var gradientFill = ctx.createLinearGradient(0, 200, 0, 50);
