@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sensor_data', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_sensor')->foreign('id_sensor')->references('id')->on('sensor');
+            $table->unsignedBigInteger('sensorid')->foreign('sensorid')->references('id')->on('sensor');
             $table->float('value');
             $table->dateTime('measured_at');
         });

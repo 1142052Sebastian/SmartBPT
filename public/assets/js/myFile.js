@@ -214,23 +214,23 @@ mainboard = {
       var ctx = document.getElementById('bigDashboardChart').getContext("2d");
   
       var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-      gradientStroke.addColorStop(0, '#80b6f4');
+      gradientStroke.addColorStop(0, '#16ca2e');
       gradientStroke.addColorStop(1, chartColor);
   
       var gradientFill = ctx.createLinearGradient(0, 200, 0, 50);
-      gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-      gradientFill.addColorStop(1, "rgba(255, 255, 255, 0.24)");
+      gradientFill.addColorStop(0, "rgba(0, 190, 32, 0)");
+      gradientFill.addColorStop(1, "rgba(0, 231, 38, 0.24)");
   
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ["Giovanni", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+          labels: ["GEN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
           datasets: [{
-            label: "Data",
+            label: "Kw",
             borderColor: chartColor,
             pointBorderColor: chartColor,
-            pointBackgroundColor: "#1e3d60",
-            pointHoverBackgroundColor: "#1e3d60",
+            pointBackgroundColor: "#2cd033",
+            pointHoverBackgroundColor: "#50f257",
             pointHoverBorderColor: chartColor,
             pointBorderWidth: 1,
             pointHoverRadius: 7,
@@ -239,7 +239,7 @@ mainboard = {
             fill: true,
             backgroundColor: gradientFill,
             borderWidth: 2,
-            data: [4555, 150, 100, 190, 130, 90, 150, 160, 120, 140, 190, 95]
+            data: [1200, 3200, 2000, 190, 451, 300, 450, 1600, 1020, 1440, 240, 95]
           }]
         },
         options: {
@@ -318,7 +318,7 @@ mainboard = {
         type: 'line',
         responsive: true,
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          labels: ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"],
           datasets: [{
             label: "Active Users",
             borderColor: "#f96332",
@@ -331,7 +331,7 @@ mainboard = {
             fill: true,
             backgroundColor: gradientFill,
             borderWidth: 2,
-            data: [1, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
+            data: [120, 80, 140, 550, 40, 570, 380, 434, 568, 610, 700, 630]
           }]
         },
         options: gradientChartOptionsConfiguration
@@ -355,7 +355,7 @@ mainboard = {
         data: {
           labels: ["12pm,", "3pm", "6pm", "9pm", "12am", "3am", "6am", "9am"],
           datasets: [{
-            label: "Email Stats",
+            label: "Kw",
             borderColor: "#18ce0f",
             pointBorderColor: "#FFF",
             pointBackgroundColor: "#18ce0f",
@@ -366,7 +366,7 @@ mainboard = {
             fill: true,
             backgroundColor: gradientFill,
             borderWidth: 2,
-            data: [10000, 500, 650, 700, 1200, 1250, 1300, 1900]
+            data: [120, 240, 300, 20, 150, 1250, 2000, 1900]
           }]
         },
         options: gradientChartOptionsConfigurationWithNumbersAndGrid

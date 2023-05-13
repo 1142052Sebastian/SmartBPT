@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('house', function (Blueprint $table) {
         $table->id();
         $table->string('name')->default('home');
-        $table->float('latitude')->nullable();
-        $table->float('logitude')->nullable();
+        $table->string('latitude')->nullable();
+        $table->string('logitude')->nullable();
         $table->timestamps();
         });
     }

@@ -44,10 +44,10 @@
     -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-          CT
+          BPT
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+          Solutions
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -175,48 +175,42 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-header">
-                <h5 class="title">Edit Profile</h5>
+                <h5 class="title">Edit Your Profile</h5>
               </div>
               <div class="card-body">
                 <form>
                   <div class="row">
-                    <div class="col-md-5 pr-1">
-                      <div class="form-group">
-                        <label>Company (disabled)</label>
-                        <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-                      </div>
-                    </div>
                     <div class="col-md-3 px-1">
                       <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="Username" value="michael23">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Username" value="<?php echo(Auth::User()->name)?>">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" placeholder="Email">
+                        <label for="exampleInputEmail1">Email<</label>
+                        <input type="email" class="form-control" placeholder="<?php echo(Auth::User()->email)?><">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" placeholder="Company" value="Mike">
+                        <label>User Name</label>
+                        <input type="text" class="form-control" placeholder="Company" value="<?php echo(Auth::User()->name)?><">
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
+                        <label>Id Code</label>
+                        <input type="text" class="form-control" placeholder="Last Name" value="<?php echo(Auth::User()->id_code)?><">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Address</label>
+                        <label><?php echo(Auth::User()->name)?><</label>
                         <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
                       </div>
                     </div>
@@ -225,19 +219,19 @@
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
                         <label>City</label>
-                        <input type="text" class="form-control" placeholder="City" value="Mike">
+                        <input type="text" class="form-control" placeholder="City" value="Vicenza">
                       </div>
                     </div>
                     <div class="col-md-4 px-1">
                       <div class="form-group">
                         <label>Country</label>
-                        <input type="text" class="form-control" placeholder="Country" value="Andrew">
+                        <input type="text" class="form-control" placeholder="Country" value="Italy">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label>Postal Code</label>
-                        <input type="number" class="form-control" placeholder="ZIP Code">
+                        <input type="number" class="form-control" placeholder="36048">
                       </div>
                     </div>
                   </div>
@@ -245,7 +239,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>About Me</label>
-                        <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                        <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Testo segnaposto da metter in caso in cui qualcuno decida di mettere del testo per far sapere qualcosa di se.</textarea>
                       </div>
                     </div>
                   </div>
@@ -262,10 +256,10 @@
                 <div class="author">
                   <a href="#">
                     <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
-                    <h5 class="title">Mike Andrew</h5>
+                    <h5 class="title"><?php echo(Auth::User()->name)?><</h5>
                   </a>
                   <p class="description">
-                    michael24
+                    <?php echo(Auth::User()->name)?>254"
                   </p>
                 </div>
                 <p class="description text-center">
@@ -275,17 +269,6 @@
                 </p>
               </div>
               <hr>
-              <div class="button-container">
-                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                  <i class="fab fa-twitter"></i>
-                </button>
-                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                  <i class="fab fa-google-plus-g"></i>
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -314,7 +297,7 @@
           <div class="copyright" id="copyright">
             &copy; <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">BTR Solutions</a>.
           </div>
         </div>
       </footer>

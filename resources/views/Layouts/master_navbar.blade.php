@@ -1,7 +1,5 @@
 {{-- @extends('layouts.master_sidebar') --}}
 
-@section('navbar')
-
     <div class="container-fluid">
       <div class="navbar-wrapper">
         <div class="navbar-toggle">
@@ -62,5 +60,3 @@
         </ul>
       </div>
     </div>
-   
-@endsection

@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('user_house', function (Blueprint $table) {
         $table->id();
-        $table->unsignedBigInteger('id_user');
-        $table->unsignedBigInteger('id_house');
+        $table->unsignedBigInteger('userid');
+        $table->unsignedBigInteger('houseid');
         $table->tinyInteger('role')->unsigned()->default(1);
         $table->timestamps();
 
-        $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-        $table->foreign('id_house')->references('id')->on('house')->onDelete('cascade');
+        $table->foreign('userid')->references('id')->on('users')->onDelete('cascade');
+        $table->foreign('houseid')->references('id')->on('house')->onDelete('cascade');
         });
     }
 
