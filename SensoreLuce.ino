@@ -2,11 +2,11 @@
 #include <WiFi101.h>
 #include <PubSubClient.h>
 
-const char* ssid = "Vodafone_Ana";
+const char* ssid = "Vodafone-Ana";
 const char* password = "BiroM1981";
 
-const char* mqttServer = "3a2151781cb047b48cf28ea12b1bec5f.s2.eu.hivemq.cloud";
-const int mqttPort = 1883;
+const char* mqttServer = "115b97e209f0479a9e9e31b2e5c0199c.s2.eu.hivemq.cloud";
+const int mqttPort = 8883;
 const char* mqttUsername = "SMARTBPT";
 const char* mqttPassword = "SmartBPT_1";
 const char* mqttTopic = "nome_topic_MQTT";
@@ -49,7 +49,7 @@ int generateRandomValue() {
   return random(2);
 }
 
-// Funzione di invio del valore di "counter" al server MQTT
+// Funzione di invio del valore del counter al server MQTT
 void publishCounterValue() {
   char counterValue[10];
   sprintf(counterValue, "%d", counter);
