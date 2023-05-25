@@ -38,3 +38,7 @@ Nonostante alcune funzionalità innovative siano rimaste in fase di brainstormin
 Idee come avvisi personalizzati per consumi elevati, analisi dei dati per identificare i dispositivi più utilizzati e l'integrazione di sensori aggiuntivi potrebbero arricchire ulteriormente l'applicazione.
 
 Siamo orgogliosi dell'idea che è nata e crediamo che il nostro progetto abbia un grande potenziale nel promuovere comportamenti sostenibili e responsabili nella società moderna.
+
+
+## **Link Presentazione** 
+https://docs.google.com/presentation/d/19GeugUeItkVI8IisUOkImXYrxUjK6Ne8SGJ4uHJv1Cw/edit?usp=sharing
